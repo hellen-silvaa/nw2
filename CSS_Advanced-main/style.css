@@ -119,6 +119,8 @@ body {
   padding: 1rem;
 }
 
+
+
 /* container */
 .container {
   display: grid;
@@ -138,7 +140,6 @@ body {
   border-radius: 30px;
   padding: 1rem;
 }
-
 
 .card1 {
   background-image: url(image/sofa.PNG);
@@ -176,7 +177,6 @@ body {
   grid-row: span 3;
 }
 
-
 /* Card 1 */
 
 .card-header {
@@ -210,7 +210,6 @@ body {
   padding: 10px;
 }
 
-
 .button-group {
   display: flex;
   gap: 1.5rem;
@@ -236,6 +235,7 @@ body {
 .icon-button:hover {
   background-color: var(--hover-1);
 }
+
 
 /* Card 2 */
 .card__grid {
@@ -332,6 +332,7 @@ a:hover {
     background-color: transparent;
   }
 }
+
 
 /* CARD 3 */
 
@@ -442,15 +443,12 @@ a:hover {
 }
 
 .balao1:after {
-  /*Triangulo*/
   content: "";
   width: 3px;
   height: 0px;
   position: absolute;
   /* border-left: 1px solid transparent;
   border-right: 1px solid transparent; */
-  /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
-  /*Aqui entra a cor da "aba" do balão */
   border-bottom: 20px solid rgb(255, 255, 255);
   /*top: -20px; localização. Experimente alterar para 'bottom' */
   bottom: -20px;
@@ -482,15 +480,14 @@ a:hover {
 }
 
 .balao2:after {
-  /*Triangulo*/
+
   content: "";
   width: 3px;
   height: 0px;
   position: absolute;
- /* border-left: 1px solid transparent;
+  /* border-left: 1px solid transparent;
   border-right: 1px solid transparent;  */
-  /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
-  /*Aqui entra a cor da "aba" do balão */
+
   border-bottom: 20px solid rgb(255, 255, 255);
   /*top: -20px; localização. Experimente alterar para 'bottom' */
   top: -20px;
@@ -515,16 +512,6 @@ a:hover {
 .seta2:nth-of-type(2) {
   transform: rotate(90deg);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -634,8 +621,7 @@ input:checked+.slider:before {
 /* CARD 4 */
 
 .card4 {
-  display: grid;
-
+  display: grid
 }
 
 .card__grid--4 h2 {
@@ -720,12 +706,12 @@ input:checked+.slider:before {
 }
 
 .smart-lamp .slider {
-  /* position: absolute; */
-  cursor: pointer;
-  /* top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; */
+  /* position: absolute;
+    cursor: pointer;
+    top: 0; 
+    left: 0; 
+    right: 0;
+     bottom: 0; */
   background-color: #b9e7f1;
   transition: .4s;
   border-radius: 20px;
@@ -753,268 +739,291 @@ input:checked+.slider:before {
 
 .brightness-control {
   display: flex;
+  align-items: center;
   width: 80%;
-  text-align: right;
-  align-items: center;
   margin-top: 20px;
-
-
-  /* padding: 2rem;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-top: 10px; */
+  position: relative;
 }
 
 .brightness-range {
   -webkit-appearance: none;
   width: 100%;
-  margin-top: 10px;
-  /* Adiciona espaçamento acima do range */
-  height: 26px;
+  height: 40px;
+
   background: linear-gradient(to right, #d3d3d3 0%, #ffffff 100%);
   border-radius: 10px;
   outline: none;
   transition: 0.3s;
   margin-right: 10px;
-}
-
-.brightness-percentage {
-  margin-top: 5px;
+  position: relative;
+  padding: 10px 0;
 }
 
 .brightness-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 24px;
-  height: 24px;
-  background: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 50%;
+  width: 2px;
+
+  height: 20px;
+
+  background: #000000;
+
   cursor: pointer;
   transition: 0.3s;
+  position: relative;
+  z-index: 2;
+  margin-left: -10px;
+
 }
 
 .brightness-range::-moz-range-thumb {
-  width: 24px;
-  height: 24px;
-  background: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 50%;
+  width: 2px;
+  height: 20px;
+  background: #000000;
   cursor: pointer;
   transition: 0.3s;
+  position: relative;
+  z-index: 2;
+  margin-left: -2px;
 }
 
 .brightness-range::-ms-thumb {
-  width: 24px;
-  height: 24px;
-  background: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 50%;
+  width: 2px;
+  height: 20px;
+  background: #000000;
   cursor: pointer;
   transition: 0.3s;
-}
-
-.brightness-percentage {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.footer-card4 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* margin-top: 100px; */
-  background-color: #8f8e8e36;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  width: 100%;
-  /* height: 220px; */
-}
-
-/* CARD 5 */
-.card5 {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(235, 17, 17, 0.1);
-  background-image: var(--gradient-card3);
-}
-
-.header-card5 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: -20px;
-}
-
-.card__grid--info5 h2 {
-  margin: 0;
-}
-
-.card__grid--info5 p {
-  margin-left: -50px;
-}
-
-.music-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.image-container {
   position: relative;
-  width: 150px;
+  z-index: 2;
+  margin-left: -2px;
 }
+  .brightness-range::before {
+    content: url('https://img.icons8.com/android/24/sun.png');
+    position: absolute;
+    left: 20px;
 
-.image-container img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
 
-#progressCircle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+  .brightness-range.low::before {
+    content: url('https://img.icons8.com/ios-glyphs/24/737373/bright-moon--v2.png');
+    position: absolute;
+    left: 10px;
 
-.circular-range {
-  width: 10%;
-  height: 70%;
-  border-radius: 10%;
-  transform: rotate(-90deg);
-  transform-origin: center;
-  -webkit-appearance: none;
-  appearance: none;
-  background: transparent;
-}
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
 
-.circular-range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background: #515251;
-  border-radius: 50%;
-  cursor: pointer;
-  /* background: transparent; */
-}
+  .brightness-percentage {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: bold;
+  }
 
-.circular-range::-moz-range-thumb {
-  -moz-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background: #4caf50;
-  border-radius: 50%;
-  cursor: pointer;
-}
+  .footer-card4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8f8e8e36;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    width: 100%;
+    height: 50%;
 
-.circular-range::-ms-thumb {
-  appearance: none;
-  width: 2px;
-  height: 2px;
-  background: #4caf50;
-  border-radius: 10%;
-  cursor: pointer;
-}
-
-.time-info {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-button {
-  background-color: inherit;
-  color: inherit;
-  border: none;
-}
-
-#below-cover {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 3em 0 1em 0;
-}
-
-#button-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.button {
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-.button-navigate {
-  font-size: 3em;
-}
-
-.button-biggest {
-  font-size: 4em;
-}
-
-#cover {
-  width: 370px;
-}
-
-#playlist-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 1em 0 2em 0;
-}
+  }
 
 
-#song-name {
-  font-size: 1.5em;
-  font-weight: bolder;
-}
+  /* CARD 5 */
+  .card5 {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(235, 17, 17, 0.1);
+    background-image: var(--gradient-card3);
+    padding: 20px;
+  }
 
-.light-color {
-  color: rgb(139, 153, 156);
-}
+  .header-card5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
-#progress-bar {
-  background-color: rgb(139, 153, 156);
-  height: 3px;
-  width: 100%;
-  border-radius: 15px;
-}
+  .card__grid--info5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-#current-progress {
-  --progress: 0%;
-  background-color: white;
-  height: inherit;
-  width: var(--progress);
-  border-radius: 15px;
-}
+  .card__grid--info5 h2 {
+    margin: 0;
+  }
 
-#progress-container {
-  cursor: pointer;
-}
+  .card__grid--info5 p {
+    margin: 0;
 
-.button-active {
-  color: rgb(0, 255, 149);
-}
+  }
 
-#time-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: smaller;
-  margin-top: 0.5em;
-}
+  .music-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .image-container {
+    position: relative;
+    /* width: 200px;
+height: 200px;  */
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  #progressCircle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #progressCircle circle {
+    stroke-width: 3;
+
+    fill: none;
+  }
+
+  #progressCircle .background-circle {
+    stroke: #d3d3d3;
+
+    stroke-dasharray: 565.48; /* Comprimento total do círculo (2 * π * r) */
+    stroke-dashoffset: 0;
+  }
+
+  #progressCircle .progress-circle {
+    stroke: #515251;
+    stroke-dasharray: 418.38 147.1;
+    stroke-dashoffset: 130.0;
+    transform: rotate(30deg);
+    transform-origin: center;
+  }
+
+  #progressCircle .progress-dot {
+    fill: #515251;
+    r: 5;
+    transform-origin: center;
+    transform: rotate(210deg) translate(90px);
+  }
+
+  .circular-range {
+    display: none;
+  }
+
+  .image-container {
+    position: relative;
+    width: 200px;
+  height: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-container img {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .arc-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: #515251;
+  }
+
+  .green-text {
+    color: var(--color-black);
+    font-weight: 600;
+  }
+
+  .time-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .time-info .current-time:first-child {
+    color: #515251;
+
+  }
+
+  .time-info .current-time:last-child {
+    color: #000;
+
+  }
+
+  #button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+  }
+
+  .button {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+  }
+
+  .button:hover {
+    transform: scale(1.2);
+
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+  }
+
+  .button-wrapper:hover {
+    background-color: #d3d3d3;
+
+  }
+
+  .button-pause-wrapper {
+    background-color: #d3d3d3;
+
+  }
+
+  .button-pause-wrapper:hover {
+    background-color: rgb(227, 161, 161);
+  }
 
 
 
+/* Responsividade para telas menores ou iguais a 1000px (tablet) */
 @media (max-width: 1000px) {
   .sidebar {
     width: 100%;
@@ -1036,21 +1045,50 @@ button {
     margin-bottom: 20px;
   }
 
-  .card3 .card-footer {
+  .card2__grid--rooms,
+  .card3__footer,
+  .card4__footer,
+  .card5__footer {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .card3 .card-footer button {
+  .card2__grid--rooms button,
+  .card3__footer-button,
+  .card4__footer-button,
+  .card5__footer-button {
     width: 80%;
     margin-bottom: 10px;
     font-size: 0.9em;
     padding: 8px;
   }
+
+  .card3__img-main,
+  .card4__lamp-image,
+  .card5__music-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card3__img-left,
+  .card3__img-right,
+  .card4__arrows,
+  .card5__button-container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* Esconder seta1 e seta2 */
+  .seta1,
+  .seta2 {
+    display: none;
+  }
 }
 
-/*  600px */
+/* Responsividade para telas menores ou iguais a 600px (celular) */
 @media (max-width: 600px) {
   .sidebar {
     width: 100%;
@@ -1072,16 +1110,131 @@ button {
     margin-bottom: 10px;
   }
 
-  .card3 .card-footer {
+  .card2__grid--rooms,
+  .card3__footer,
+  .card4__footer,
+  .card5__footer {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .card3 .card-footer button {
+  .card2__grid--rooms button,
+  .card3__footer-button,
+  .card4__footer-button,
+  .card5__footer-button {
     width: 100%;
     margin-bottom: 5px;
     font-size: 0.9em;
     padding: 8px;
+  }
+
+  .card3__img-main,
+  .card4__lamp-image,
+  .card5__music-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card3__img-left,
+  .card3__img-right,
+  .card4__arrows,
+  .card5__button-container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* Ajuste específico para os botões do card 3 */
+  .card3__footer-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Esconder os balões no card 3 */
+  .card3__img-left,
+  .card3__img-right {
+    display: none;
+  }
+
+  /* Esconder seta1 e seta2 */
+  .seta1,
+  .seta2 {
+    display: none;
+  }
+
+  /* Ajuste específico para os botões no card-footer */
+  .card-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-footer button {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  /* Centralizar a imagem no card 3 */
+  .card3__img-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+/* Responsividade para telas maiores ou iguais a 1201px (telas muito grandes, TVs) */
+@media (min-width: 1201px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .card2__grid--rooms,
+  .card3__footer,
+  .card4__footer,
+  .card5__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .card2__grid--rooms button,
+  .card3__footer-button,
+  .card4__footer-button,
+  .card5__footer-button {
+    width: 30%;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    padding: 12px;
+  }
+
+  .card3__img-main,
+  .card4__lamp-image,
+  .card5__music-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .card3__img-left,
+  .card3__img-right,
+  .card4__arrows,
+  .card5__button-container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
 }
