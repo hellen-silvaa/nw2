@@ -973,16 +973,60 @@ input:checked+.slider:before {
     padding: 10px 0;
     z-index: 1000;
   }
-
-  body {
-    padding-bottom: 60px; 
+  .card1 {
+    display: block; /* Certifique-se de que o card 1 esteja visível */
+    width: 100%; /* Ajuste a largura conforme necessário */
+    margin-bottom: 10px; /* Espaçamento inferior */
   }
 
-  .icons-middle {
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-header--button-live {
+    margin-bottom: 10px; /* Espaçamento inferior */
+  }
+
+  .button-group {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+  }
+  
+  .icon-button {
+    display: flex;
+    flex-direction: row; /* Alinha o ícone e o texto lado a lado */
+    align-items: center;
+    justify-content: center;
+    width: 20%; /* Ajuste a largura conforme necessário */
+    margin-bottom: 0; /* Remova o margin-bottom para evitar espaçamento extra */
+    font-size: 0.8em; /* Ajuste o tamanho da fonte conforme necessário */
+    padding: 6px; /* Ajuste o padding conforme necessário */
+  }
+  
+  .icon-button img {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+    width: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+  }
+  
+  .icon-button p {
+    margin: 0;
+    font-size: 0.9em; /* Ajuste o tamanho da fonte conforme necessário */
+    text-align: center; /* Centralize o texto */
+  }
+  
+  body {
+    padding-bottom: 60px; 
+  }
+  
+  .icons-middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   .icons-middle .icon {
@@ -1230,6 +1274,11 @@ input:checked+.slider:before {
     align-items: center;
     width: 100%;
   }
+   .img-left-card3.balao1,
+  .seta2,
+  .img-right-card3.balao2 {
+    display: none;
+  }
 }
 /* >= 1201px  */
 @media (min-width: 1201px) {
@@ -1237,7 +1286,14 @@ input:checked+.slider:before {
     max-width: 1400px;
     margin: 0 auto;
   }
-
+  .card1__img {
+    
+    display: block;
+    ;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
   .card {
     width: 100%;
     margin-bottom: 30px;
@@ -1257,7 +1313,7 @@ input:checked+.slider:before {
   .card3__footer-button,
   .card4__footer-button,
   .card5__footer-button {
-    width: 30%;
+    width: 100%; /* Adjusted to occupy full width of the card */
     margin-bottom: 15px;
     font-size: 1.1em;
     padding: 12px;
