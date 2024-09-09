@@ -63,13 +63,15 @@ body {
   overflow: hidden;
 }
 
+
+
 .sidebar {
-  width: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 0;
-  flex-wrap: wrap;
+  padding: 20px;
+  height: 100vh;
+  width: 60px;
 }
 
 .logo-top img,
@@ -956,13 +958,43 @@ input:checked+.slider:before {
 }
 
 
-
-/* <=1000px (tablet) */
+/* Responsividade */
 @media (max-width: 1000px) {
   .sidebar {
     width: 100%;
     height: auto;
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #d3dde87c;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  body {
+    padding-bottom: 60px; 
+  }
+
+  .icons-middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .icons-middle .icon {
+    margin: 0 10px;
+  }
+
+  .icon:hover {
+    width: 40px; /* Ajuste a largura durante o hover */
+  }
+
+  .logos-bottom {
+    display: none;
   }
 
   .container {
@@ -974,8 +1006,12 @@ input:checked+.slider:before {
     max-height: 100vh;
   }
 
+  .icons-middle .icon:hover {
+    width: 40px; /* Ajuste a largura durante o hover */
+  }
+
   .card {
-    width: 80%;
+    width: 95%; /* Aumente a largura dos cards */
     margin-bottom: 20px;
   }
 
@@ -1012,22 +1048,69 @@ input:checked+.slider:before {
   .card5__button-container {
     flex-direction: row;
     justify-content: space-between;
-    width: 10%;
+    width: 100%;
   }
 
   .seta1,
   .seta2 {
     display: none;
-
   }
+  
 }
 
-/* <= 600px (celular) */
 @media (max-width: 600px) {
   .sidebar {
     width: 100%;
     height: auto;
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #d3dde87c;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .icons-middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .icons-middle .icon {
+    margin: 1px; 
+    transition: width 0.3s;
+  }
+
+  .icons-middle .icon:hover {
+    width: 40px; /* Ajuste a largura durante o hover */
+  }
+
+  .icons-middle .icon i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1; /* Ajuste a largura conforme necessário */
+    height: 30px; /* Ajuste a altura conforme necessário */
+    border-radius: 50%;
+    transition: background-color 0.3s, width 0.3s, height 0.3s;
+  }
+
+  .icons-middle .icon i:hover {
+    width: 35px; /* Ajuste a largura durante o hover */
+    height: 35px; /* Ajuste a altura durante o hover */
+  }
+
+  .icons-middle .icon i img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logos-bottom {
+    display: none;
   }
 
   .container {
@@ -1080,8 +1163,14 @@ input:checked+.slider:before {
     width: 100%;
   }
 
-  .card3__footer-button {
+  .card3__footer {
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
+  }
+
+  .card3__footer .btn-footer {
+    width: 30%; /* Ajuste a largura para que os botões fiquem lado a lado */
     margin-bottom: 10px;
   }
 
@@ -1095,28 +1184,53 @@ input:checked+.slider:before {
     display: none;
   }
 
-
   .card-footer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .card-footer button {
-    width: 100%;
-    margin-bottom: 10px;
-    font-size: 0.9em;
-    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%; /* Ajuste a largura para que os botões fiquem lado a lado */
+    margin-bottom: 0; /* Remova o margin-bottom para evitar espaçamento extra */
+    font-size: 0.8em; 
+    padding: 6px; /* Ajuste o padding conforme necessário */
+  }
+  .card-footer button .icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px; /* Espaçamento entre o ícone e o texto */
+  }
+
+  .card-footer button h3 {
+    margin: 0;
+    font-size: 0.9em; 
+  }
+
+  .card-footer button p {
+    margin: 0;
+    font-size: 0.7em; 
   }
 
   .card3__img-main {
     display: flex;
     justify-content: center;
- align-items: center;
+    align-items: center;
+    width: 100%;
+  }
+  .card3__img-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
   }
 }
-
 /* >= 1201px  */
 @media (min-width: 1201px) {
   .container {
